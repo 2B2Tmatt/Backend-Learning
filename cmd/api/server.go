@@ -1,7 +1,7 @@
 package main
 
 import (
-	"Rest-root/internal/api/middlewares"
+	mw "Rest-root/internal/api/middlewares"
 	"crypto/tls"
 	"fmt"
 	"log"
@@ -106,8 +106,7 @@ func main() {
 	server := &http.Server{
 		Addr: port,
 		// Handler: mux,
-		// Handler:   middlewares.SecurityHeaders(mux),
-		Handler:   middlewares.Cors(mux),
+		Handler:   mw.ResponseTimeMiddleware(mw.SecurityHeaders(mw.Cors(mux))),
 		TLSConfig: tlsConfig,
 	}
 
