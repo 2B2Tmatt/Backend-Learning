@@ -8,9 +8,7 @@
 *.so
 *.dylib
 # keys/certs
-key.pem
-cert.pem
-*.pem
+
 *.key
 *.p12
 *.pfx
