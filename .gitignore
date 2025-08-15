@@ -7,15 +7,14 @@
 *.dll
 *.so
 *.dylib
-# cert keys / private material
+# keys/certs
+key.pem
+cert.pem
+*.pem
 *.key
-*.key.pem
-**/key.pem
-*.pfx
 *.p12
-*.pkcs12
-id_*
-*.crt.srl
+*.pfx
+
 
 # Test binary, built with `go test -c`
 *.test
